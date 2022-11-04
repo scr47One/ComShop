@@ -1,4 +1,0 @@
-package adaptadores
-
-class Adaptador {
-}

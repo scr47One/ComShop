@@ -4,21 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cotiza">
+    tools:context=".Cotiza"
+    android:background="@color/cardview_light_background">
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="5">
         <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_rubro"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
 
     </LinearLayout>
 
