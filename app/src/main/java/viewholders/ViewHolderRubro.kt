@@ -16,5 +16,6 @@ class ViewHolderRubro(view: View) : RecyclerView.ViewHolder(view){
     fun render(rubroModel: Rubro){
         nombre_rubro.text = rubroModel.nombre_rubro
         Glide.with(imagen_rubro.context).load(rubroModel.imagen_rubro).into(imagen_rubro)
+
     }
 }

@@ -7,24 +7,11 @@
     tools:context=".Cotiza"
     android:background="@color/cardview_light_background">
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="5">
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_rubro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"/>
-
-    </LinearLayout>
+<fragment
+    android:id="@+id/rubroFragment"
+    class="com.example.compshop.rubrosFragments.RubroFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

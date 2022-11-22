@@ -1,10 +1,14 @@
 package com.example.compshop
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.commit
+
+import com.example.compshop.rubrosFragments.RubroFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,3 +28,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+

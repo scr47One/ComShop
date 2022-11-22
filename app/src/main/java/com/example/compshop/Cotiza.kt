@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import modelos.RubroProviderPrueba
 
 class Cotiza : AppCompatActivity() {
@@ -17,18 +19,7 @@ class Cotiza : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cotiza)
-        initRecyclerView()
-//        boton = findViewById(R.id.button8)
-//
-//        boton!!.setOnClickListener()
-//        {
-//            startActivity(Intent(this, MainActivity::class.java))
-//
-//        }
+
     }
-    fun initRecyclerView() {
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview_rubro)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = AdaptadorRubro(RubroProviderPrueba.rubroList)
-    }
+
 }
