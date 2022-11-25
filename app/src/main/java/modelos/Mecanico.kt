@@ -1,4 +1,3 @@
 package modelos
 
-class Mecanico {
-}
+data class Mecanico (val nombre_mecanico: String, val imagen_mecanico: String)

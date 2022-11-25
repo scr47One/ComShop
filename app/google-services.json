@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "55560020181",
+    "project_id": "compshop-4165a",
+    "storage_bucket": "compshop-4165a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55560020181:android:d85e83200111600dc1425c",
+        "android_client_info": {
+          "package_name": "com.example.compshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55560020181-f4bp50diqfn167j41r8seckubh16hbuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWo6JW94Msq_VhOpy7wfwCQqed_2X5IVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55560020181-f4bp50diqfn167j41r8seckubh16hbuf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

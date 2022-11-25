@@ -2,11 +2,12 @@ package com.example.compshop.rubrosFragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import com.example.compshop.R
 import com.example.compshop.databinding.FragmentRubroBinding
+import com.example.compshop.interioressFragments.InterioresFragment
+import com.example.compshop.mecanicasFragments.MecanicaFragment
+import com.example.compshop.suspencionsFragments.SuspencionFragment
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 
@@ -25,10 +26,10 @@ class RubroFragment : Fragment(R.layout.fragment_rubro) {
         val adapter = FragmentPagerItemAdapter(
             childFragmentManager,
             FragmentPagerItems.with(activity)
-                .add("Servicios", ServiciosFragment::class.java)
-                .add("Afinacion", AfinacionFragment::class.java)
-                .add("Detalles", DetallesFragment::class.java)
-                .add("Pintura", PinturaFragment::class.java)
+                .add("Mecanica", MecanicaFragment::class.java)
+                .add("Interiores", InterioresFragment::class.java)
+                .add("Suspencion", SuspencionFragment::class.java)
+                .add("Hojalateria", HojalateriaFragment::class.java)
                 .create()
         )
 

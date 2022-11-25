@@ -11,7 +11,7 @@ class AdaptadorRubro(private val rubroList:List<Rubro>) : RecyclerView.Adapter<V
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderRubro {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolderRubro(layoutInflater.inflate(R.layout.layout_rubro, parent, false))
+        return ViewHolderRubro(layoutInflater.inflate(R.layout.layout_servicios, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolderRubro, position: Int) {
