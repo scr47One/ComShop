@@ -35,7 +35,6 @@ class RubroFragment : Fragment(R.layout.fragment_rubro) {
 
         binding.viewpager.adapter = adapter
         binding.viewpagertab.setViewPager(binding.viewpager)
-
-
     }
+
 }

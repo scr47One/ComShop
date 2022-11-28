@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.compshop.R
 import modelos.Rubro
 
-class ViewHolderRubro(view: View) : RecyclerView.ViewHolder(view){
+class BaseViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
     val nombre = view.findViewById<TextView>(R.id.nombre)
     val imagen = view.findViewById<ImageView>(R.id.imagen)

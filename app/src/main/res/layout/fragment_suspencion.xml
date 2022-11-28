@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rubrosFragments.SuspencionFragment">
+    tools:context=".rubrosFragments.SuspencionFragment"
+    android:background="@color/black">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,6 +12,6 @@
         android:id="@+id/recyclerview_suspencion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="5"/>
+        />
 
 </FrameLayout>

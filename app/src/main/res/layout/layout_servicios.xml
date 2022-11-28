@@ -19,7 +19,6 @@
                 android:id="@+id/imagen"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-
                 android:scaleType="centerCrop"
                 android:foreground="@drawable/gradiente"
                 />
@@ -31,10 +30,9 @@
                 android:layout_marginStart="10dp"
                 android:layout_gravity="bottom"
                 tools:text="HOLA"
-                tools:background="@color/black"
                 android:textColor="@color/white"
                 android:textSize="40sp"
-
+                android:textStyle="bold"
                 />
 
         </com.google.android.material.card.MaterialCardView>
