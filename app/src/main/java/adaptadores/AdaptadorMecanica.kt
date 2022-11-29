@@ -11,7 +11,7 @@ class AdaptadorMecanica(private val mecanicaList:List<Mecanica>) : RecyclerView.
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderMecanica {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolderMecanica(layoutInflater.inflate(R.layout.layout_servicios, parent, false))
+        return ViewHolderMecanica(layoutInflater.inflate(R.layout.item_rubros, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolderMecanica, position: Int) {

@@ -7,11 +7,14 @@
     tools:context=".Cotiza"
     android:background="@color/cardview_light_background">
 
-<fragment
+
+    <fragment
     android:id="@+id/rubroFragment"
     class="com.example.compshop.rubrosFragments.RubroFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

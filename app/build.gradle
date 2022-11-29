@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-firestore:24.4.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 
     testImplementation 'junit:junit:4.13.2'
@@ -58,5 +59,17 @@ dependencies {
     //Optional: see how to use the utility.
     implementation 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata:2.5.1")
+
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.21")
+
 
 }

@@ -10,12 +10,5 @@ import modelos.Rubro
 
 class BaseViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-    val nombre = view.findViewById<TextView>(R.id.nombre)
-    val imagen = view.findViewById<ImageView>(R.id.imagen)
 
-    fun render(rubroModel: Rubro){
-        nombre.text = rubroModel.nombre
-        Glide.with(imagen.context).load(rubroModel.imagen).into(imagen)
-
-    }
 }

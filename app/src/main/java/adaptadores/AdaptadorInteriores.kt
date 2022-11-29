@@ -11,7 +11,7 @@ class AdaptadorInteriores(private val interioresList:List<Interiores>) : Recycle
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderInteriores {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolderInteriores(layoutInflater.inflate(R.layout.layout_servicios, parent, false))
+        return ViewHolderInteriores(layoutInflater.inflate(R.layout.item_rubros, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolderInteriores, position: Int) {
