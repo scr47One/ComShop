@@ -24,11 +24,10 @@ class MecanicosActivity : AppCompatActivity() {
             binding.recyclerviewMecanicos.layoutManager = LinearLayoutManager(this)
             binding.recyclerviewMecanicos.adapter = adaptador
         val nombre = intent.getStringExtra("nombre")
-        Log.e("ADAPTADOR",nombre!!)
         observeData(nombre!!)
     }
     fun observeData(nombreObserver: String){
-        viewModel.fetchUserData(nombreObserver).observe(this, Observer {
+        viewModel.fetchUserData(nombreObserver).second.observe(this, Observer {
            adaptador.setListData(it)
         })
     }

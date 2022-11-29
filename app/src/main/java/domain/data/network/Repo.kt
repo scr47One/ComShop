@@ -5,13 +5,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
 import modelos.Mecanico
+import modelos.Servicio
 
 class Repo {
 
-    fun getUserData(nombreObserver: String):LiveData<MutableList<Mecanico>>{
-        val mutableData = MutableLiveData<MutableList<Mecanico>>()
+    fun getUserData(nombreObserver: String):Pair<LiveData<MutableList<Mecanico>>,LiveData<MutableList<Servicio>>>{
+        val mutableDataMecanico = MutableLiveData<MutableList<Mecanico>>()
+        val mutableDataServicio = MutableLiveData<MutableList<Servicio>>()
         FirebaseFirestore.getInstance().collection("Mecanico").get().addOnSuccessListener { result->
-
+            val listServicio = mutableListOf<Servicio>()
             val listData= mutableListOf<Mecanico>()
             for(document in result ){
                 val nombre = document.getString("nombre")
@@ -34,11 +36,14 @@ class Repo {
                         afinacion,alfombra,alineacion,
                         amortiguadores,asientos,balanceo,
                         bandas,empastado,encerado,pulido)
+                val servicio = Servicio(nombre,nombreObserver,precioServicio,imagen)
                 listData.add(mecanico)
+                listServicio.add(servicio)
             }
-            mutableData.value=listData
+            mutableDataMecanico.value=listData
+            mutableDataServicio.value=listServicio
         }
-        return mutableData
+        return Pair(mutableDataMecanico,mutableDataServicio)
     }
 
 
