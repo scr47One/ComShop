@@ -1,6 +1,7 @@
 package domain.data.network
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
@@ -19,7 +20,6 @@ class Repo {
                 val nombre = document.getString("nombre")
                 val imagen= document.getString("imagen")
                 val telefono= document.getDouble("telefono")!!.toInt()
-                //TODO: REVISAR LA FORMA DE MANDAR EL PRECIO DEL SERVICIO Y EL NOMBRE DE NUEVO A LA LISTA
                 val precioServicio = document.getDouble(nombreObserver)!!.toInt()
                 val aceite= document.getDouble("aceite")!!.toInt()
                 val afinacion= document.getDouble("afinacion")!!.toInt()
@@ -32,6 +32,7 @@ class Repo {
                 val empastado= document.getDouble("empastado")!!.toInt()
                 val encerado = document.getDouble("encerado")!!.toInt()
                 val pulido= document.getDouble("pulido")!!.toInt()
+                Log.e("nombre",nombre!!)
                 val mecanico = Mecanico(nombre!!,imagen!!,telefono,aceite,
                         afinacion,alfombra,alineacion,
                         amortiguadores,asientos,balanceo,

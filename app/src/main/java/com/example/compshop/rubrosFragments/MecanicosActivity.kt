@@ -1,15 +1,15 @@
 package com.example.compshop.rubrosFragments
 
 import adaptadores.MecanicosAdaptador
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.util.Log.e
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.compshop.R
 import com.example.compshop.databinding.ActivityMecanicosBinding
-import modelos.Mecanico
 import viewModels.MecanicosViewModel
 
 class MecanicosActivity : AppCompatActivity() {
@@ -26,9 +26,10 @@ class MecanicosActivity : AppCompatActivity() {
         val nombre = intent.getStringExtra("nombre")
         observeData(nombre!!)
     }
-    fun observeData(nombreObserver: String){
+    private fun observeData(nombreObserver: String){
         viewModel.fetchUserData(nombreObserver).second.observe(this, Observer {
            adaptador.setListData(it)
+
         })
     }
 }

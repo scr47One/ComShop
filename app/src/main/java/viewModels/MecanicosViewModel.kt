@@ -13,7 +13,7 @@ class MecanicosViewModel: ViewModel() {
         val mutableDataMecanico = MutableLiveData<MutableList<Mecanico>>()
         val mutableDataServicio = MutableLiveData<MutableList<Servicio>>()
         repo.getUserData(nombreObserver).first.observeForever{ mecanicoList->
-            mutableDataMecanico.value =mecanicoList
+            mutableDataMecanico.value = mecanicoList
         }
         repo.getUserData(nombreObserver).second.observeForever { servicioList ->
             mutableDataServicio.value = servicioList
