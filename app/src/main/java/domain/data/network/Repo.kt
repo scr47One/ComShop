@@ -1,7 +1,6 @@
 package domain.data.network
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
@@ -9,7 +8,6 @@ import modelos.Mecanico
 import modelos.Servicio
 
 class Repo {
-
     fun getUserData(nombreObserver: String):Pair<LiveData<MutableList<Mecanico>>,LiveData<MutableList<Servicio>>>{
         val mutableDataMecanico = MutableLiveData<MutableList<Mecanico>>()
         val mutableDataServicio = MutableLiveData<MutableList<Servicio>>()
@@ -32,7 +30,6 @@ class Repo {
                 val empastado= document.getDouble("empastado")!!.toInt()
                 val encerado = document.getDouble("encerado")!!.toInt()
                 val pulido= document.getDouble("pulido")!!.toInt()
-                Log.e("nombre",nombre!!)
                 val mecanico = Mecanico(nombre!!,imagen!!,telefono,aceite,
                         afinacion,alfombra,alineacion,
                         amortiguadores,asientos,balanceo,
@@ -46,6 +43,4 @@ class Repo {
         }
         return Pair(mutableDataMecanico,mutableDataServicio)
     }
-
-
 }

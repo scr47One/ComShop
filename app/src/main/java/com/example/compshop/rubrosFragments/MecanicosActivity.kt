@@ -29,7 +29,7 @@ class MecanicosActivity : AppCompatActivity() {
     private fun observeData(nombreObserver: String){
         viewModel.fetchUserData(nombreObserver).second.observe(this, Observer {
            adaptador.setListData(it)
-
+            adaptador.notifyDataSetChanged()
         })
     }
 }
