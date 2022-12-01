@@ -1,37 +1,54 @@
 package com.example.compshop.interioressFragments
 
+
 import adaptadores.AdaptadorInteriores
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.compshop.*
+import com.example.compshop.databinding.FragmentInterioresBinding
+import com.example.compshop.rubrosFragments.MecanicosActivity
+import modelos.Interiores
 import modelos.InterioresProviderPrueba
 
 
 class InterioresFragment : Fragment() {
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<viewholders.ViewHolderInteriores>? = null
+    private lateinit var binding: FragmentInterioresBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       return inflater.inflate(R.layout.fragment_interiores, container, false)
+        binding = FragmentInterioresBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-        var recyclerview_interiores = itemView.findViewById<RecyclerView>(R.id.recyclerview_interiores)
-        recyclerview_interiores.apply{
-            layoutManager = LinearLayoutManager(activity)
-            adapter = AdaptadorInteriores(InterioresProviderPrueba.interioresList)
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerviewInteriores.layoutManager = LinearLayoutManager(activity)
+        binding.recyclerviewInteriores.adapter = AdaptadorInteriores(InterioresProviderPrueba.interioresList) { interiores ->
+            onItemSelected(
+                interiores
+            )
         }
+
+    }
+
+    private fun onItemSelected(interiores: Interiores) {
+        val intent = Intent(context, MecanicosActivity::class.java)
+        intent.putExtra("nombre", interiores.nombrebd)
+        startActivity(intent)
     }
 
 }

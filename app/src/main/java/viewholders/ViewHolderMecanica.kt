@@ -6,16 +6,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.compshop.R
+import com.example.compshop.databinding.ItemRubrosBinding
+import modelos.Hojalateria
 import modelos.Mecanica
 
 class ViewHolderMecanica(view: View) : RecyclerView.ViewHolder(view){
 
-    val nombre = view.findViewById<TextView>(R.id.nombre)
-    val imagen = view.findViewById<ImageView>(R.id.imagen)
+    val binding = ItemRubrosBinding.bind(view)
 
-    fun render(mecanicaModel: Mecanica){
-        nombre.text = mecanicaModel.nombre
-        Glide.with(imagen.context).load(mecanicaModel.imagen).into(imagen)
-
+    fun render(mecanicaModel: Mecanica, onClickListener:(Mecanica)->Unit){
+        binding.nombre.text = mecanicaModel.nombre
+        Glide.with(binding.imagen.context).load(mecanicaModel.imagen).into(binding.imagen)
+        itemView.setOnClickListener{
+            onClickListener(mecanicaModel)
+        }
     }
 }

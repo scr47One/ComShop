@@ -6,16 +6,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.compshop.R
+import com.example.compshop.databinding.ItemRubrosBinding
+import modelos.Hojalateria
 import modelos.Suspencion
 
 class ViewHolderSuspencion(view: View) : RecyclerView.ViewHolder(view){
 
-    val nombre = view.findViewById<TextView>(R.id.nombre)
-    val imagen = view.findViewById<ImageView>(R.id.imagen)
+    val binding = ItemRubrosBinding.bind(view)
 
-    fun render(suspencionModel: Suspencion){
-        nombre.text = suspencionModel.nombre
-        Glide.with(imagen.context).load(suspencionModel.imagen).into(imagen)
-
+    fun render(suspencionModel: Suspencion,  onClickListener:(Suspencion)->Unit){
+        binding.nombre.text = suspencionModel.nombre
+        Glide.with(binding.imagen.context).load(suspencionModel.imagen).into(binding.imagen)
+        itemView.setOnClickListener{
+            onClickListener(suspencionModel)
+        }
     }
 }

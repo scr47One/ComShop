@@ -1,34 +1,46 @@
-package com.example.compshop.suspencionsFragments
+package com.example.compshop.rubrosFragments
 
 import adaptadores.AdaptadorSuspencion
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.compshop.R
+import com.example.compshop.databinding.FragmentSuspencionBinding
+import modelos.Suspencion
 import modelos.SuspencionProviderPrueba
 
 class SuspencionFragment : Fragment() {
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<viewholders.ViewHolderSuspencion>? = null
+    private lateinit var binding: FragmentSuspencionBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_suspencion, container, false)
+    ): View {
+        binding = FragmentSuspencionBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-        var recyclerview_suspencion = itemView.findViewById<RecyclerView>(R.id.recyclerview_suspencion)
-        recyclerview_suspencion.apply{
-            layoutManager = LinearLayoutManager(activity)
-            adapter = AdaptadorSuspencion(SuspencionProviderPrueba.suspencionList)
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerviewSuspencion.layoutManager = LinearLayoutManager(activity)
+        binding.recyclerviewSuspencion.adapter = AdaptadorSuspencion(SuspencionProviderPrueba.suspencionList) { suspencion ->
+            onItemSelected(
+                suspencion
+            )
         }
+    }
+    private fun onItemSelected(suspencion: Suspencion){
+        val intent = Intent(context, MecanicosActivity::class.java)
+        intent.putExtra("nombre", suspencion.nombrebd)
+        startActivity(intent)
     }
 }

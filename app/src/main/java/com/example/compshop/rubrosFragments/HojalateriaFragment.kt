@@ -3,16 +3,12 @@ package com.example.compshop.rubrosFragments
 import adaptadores.AdaptadorHojalateria
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.compshop.R
 import com.example.compshop.databinding.FragmentHojalateriaBinding
-import com.example.compshop.databinding.FragmentRubroBinding
 import modelos.Hojalateria
 import modelos.HojalateriaProviderPrueba
 
@@ -24,7 +20,7 @@ class HojalateriaFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHojalateriaBinding.inflate(layoutInflater)
 
         return binding.root
@@ -36,10 +32,13 @@ class HojalateriaFragment : Fragment() {
     }
     fun initRecyclerView(){
         binding.recyclerviewHojalateria.layoutManager = LinearLayoutManager(activity)
-        binding.recyclerviewHojalateria.adapter = AdaptadorHojalateria(HojalateriaProviderPrueba.hojalateriaList, {hojalateria ->  onItemSelected(hojalateria)})
-
+        binding.recyclerviewHojalateria.adapter = AdaptadorHojalateria(HojalateriaProviderPrueba.hojalateriaList) { hojalateria ->
+            onItemSelected(
+                hojalateria
+            )
+        }
     }
-    fun onItemSelected(hojalateria: Hojalateria){
+    private fun onItemSelected(hojalateria: Hojalateria){
         val intent = Intent(context,MecanicosActivity::class.java)
         intent.putExtra("nombre", hojalateria.nombrebd)
         startActivity(intent)

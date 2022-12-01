@@ -7,7 +7,6 @@ import com.example.compshop.R
 import com.example.compshop.databinding.FragmentRubroBinding
 import com.example.compshop.interioressFragments.InterioresFragment
 import com.example.compshop.mecanicasFragments.MecanicaFragment
-import com.example.compshop.suspencionsFragments.SuspencionFragment
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 
