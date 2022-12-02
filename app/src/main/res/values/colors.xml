@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="grey">#3F485B</color>
-    <color name="orange">#FA6C17</color>
-    <color name="blue_light">#849AB5</color>
+    <color name="grey">#53658A</color>
+    <color name="grey_mid">#627397</color>
+    <color name="orange">#FD7421</color>
+    <color name="orange_light">#FF8D48</color>
+    <color name="blue_light">#95C5FD</color>
     <color name="black">#FF000000</color>
-    <color name="grey_light">#CCCCCC</color>
+    <color name="grey_light">#F1EFEF</color>
 </resources>

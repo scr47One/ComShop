@@ -11,7 +11,7 @@
         />
     <path
         android:name="triangulo2"
-        android:fillColor="@color/grey_light"
+        android:fillColor="@color/grey"
         android:pathData="M 0,0 L 100,0 0,100 z"
         />
     </vector>

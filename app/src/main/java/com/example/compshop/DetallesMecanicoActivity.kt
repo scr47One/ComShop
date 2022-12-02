@@ -40,8 +40,6 @@ class DetallesMecanicoActivity : AppCompatActivity() {
                     binding.alineacion.text = "$${mecanico.alineacion}"
                     binding.balanceo.text = "$${mecanico.balanceo}"
                     binding.bandas.text = "$${mecanico.bandas}"
-
-
                 }
             }
         }

@@ -60,7 +60,7 @@
             android:fontFamily="sans-serif"
             android:text="METEPEC"
             android:textAllCaps="true"
-            android:textColor="@color/black"
+            android:textColor="@color/blue_light"
             android:textSize="14sp" />
 
     </RelativeLayout>
@@ -71,26 +71,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/perfil_principal_layout"
         android:layout_centerInParent="true"
+        android:background="@color/orange"
         android:orientation="vertical"
-        android:padding="15dp"
-        android:background="@color/grey">
+        android:padding="15dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="TELEFONO"
-            android:textColor="@color/blue_light"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/telefono"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:textColor="@color/grey_light"
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:text="7220000000"
-            android:textColor="@color/grey_light"/>
+            tools:text="7220000000" />
 
         <View
             android:layout_width="match_parent"
@@ -105,13 +105,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blue_light"
+        android:background="@color/grey"
         android:layout_below="@+id/telefono_layout">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -128,29 +129,40 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/grey_mid"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Cambio aceite"
-                                android:textStyle="bold"/>
+                                android:textColor="@color/blue_light"
+                                android:textStyle="bold" />
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/aceite"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:layout_weight="1"
+                                android:textColor="@color/grey_light"
+                                android:textSize="20sp"
+                                tools:text="precio" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -158,33 +170,45 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/grey_mid"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Afinacion"
-                                android:textStyle="bold"/>
+                                android:textColor="@color/blue_light"
+                                android:textStyle="bold" />
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/afinacion"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:layout_weight="1"
+                                android:textColor="@color/grey_light"
+                                android:textSize="20sp"
+                                tools:text="precio" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -194,29 +218,40 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/grey_mid"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Cambio de bandas"
-                                android:textStyle="bold"/>
+                                android:textColor="@color/blue_light"
+                                android:textStyle="bold" />
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/bandas"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:layout_weight="1"
+                                android:textColor="@color/grey_light"
+                                android:textSize="20sp"
+                                tools:text="precio" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -224,33 +259,45 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/grey_mid"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Asientos"
-                                android:textStyle="bold"/>
+                                android:textColor="@color/blue_light"
+                                android:textStyle="bold" />
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/asientos"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:layout_weight="1"
+                                android:textColor="@color/grey_light"
+                                android:textSize="20sp"
+                                tools:text="precio" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -260,29 +307,40 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/grey_mid"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Alfombra"
-                                android:textStyle="bold"/>
+                                android:textColor="@color/blue_light"
+                                android:textStyle="bold" />
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/alfombra"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:layout_weight="1"
+                                android:textColor="@color/grey_light"
+                                android:textSize="20sp"
+                                tools:text="precio" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -290,33 +348,45 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/grey_mid">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Alineación"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_light"/>
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/alineacion"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
                                 tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:textColor="@color/grey_light"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -326,29 +396,40 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/grey_mid">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Balanceo"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_light"/>
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/balanceo"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
                                 tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:textColor="@color/grey_light"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -356,33 +437,45 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/grey_mid">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Cambio de amortiguadores"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_light"/>
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/amortiguadores"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
                                 tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:textColor="@color/grey_light"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -392,29 +485,40 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/grey_mid">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Pulido"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_light"/>
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/pulido"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
                                 tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:textColor="@color/grey_light"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -422,33 +526,45 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/grey_mid">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Encerado"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_light"/>
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/encerado"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
                                 tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:textColor="@color/grey_light"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -458,29 +574,40 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/grey_mid">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="1"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:text="Empastado"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_light"/>
+
                             <TextView
-                                android:layout_width="match_parent"
                                 android:id="@+id/empastado"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
                                 tools:text="precio"
-                                android:textSize="20sp"/>
+                                android:textColor="@color/grey_light"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/orange" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>

@@ -1,7 +1,6 @@
 package adaptadores
 
 import adaptadores.glide.GlideApp
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -41,4 +40,5 @@ class MecanicosAdaptador(private val context: Context, private val onClickListen
             }
         }
     }
+
 }

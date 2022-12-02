@@ -36,8 +36,15 @@ class MecanicosActivity : AppCompatActivity() {
     }
 
     private fun observeData(nombreObserver: String){
+        var filtroServicioList = mutableListOf<Servicio>()
         viewModel.fetchUserData(nombreObserver).observe(this, Observer {
-           adaptador.setListData(it)
+            for (mecanico in it){
+                if (mecanico.precioServicio != 0){
+                    filtroServicioList.add(mecanico)
+                }
+            }
+
+           adaptador.setListData(filtroServicioList)
             adaptador.notifyDataSetChanged()
         })
     }
