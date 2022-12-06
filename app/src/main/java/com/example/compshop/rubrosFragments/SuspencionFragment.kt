@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.compshop.MecanicosActivity
 import com.example.compshop.databinding.FragmentSuspencionBinding
 import modelos.Suspencion
 import modelos.SuspencionProviderPrueba

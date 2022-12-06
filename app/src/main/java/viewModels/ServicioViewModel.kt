@@ -8,7 +8,7 @@ import modelos.Servicio
 class ServicioViewModel: ViewModel() {
    private val repoServicios = domain.data.network.RepoServicios()
 
-    fun fetchUserData(nombreObserver: String):LiveData<MutableList<Servicio>>{
+    fun fetchUserData(nombreObserver: String?):LiveData<MutableList<Servicio>>{
 
         val mutableDataServicio = MutableLiveData<MutableList<Servicio>>()
 

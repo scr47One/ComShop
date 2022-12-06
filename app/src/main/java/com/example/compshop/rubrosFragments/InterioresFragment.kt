@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.compshop.databinding.FragmentInterioresBinding
-import com.example.compshop.rubrosFragments.MecanicosActivity
+import com.example.compshop.MecanicosActivity
 import modelos.Interiores
 import modelos.InterioresProviderPrueba
 

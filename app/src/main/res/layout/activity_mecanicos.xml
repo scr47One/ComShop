@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".rubrosFragments.MecanicosActivity">
+    tools:context=".MecanicosActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

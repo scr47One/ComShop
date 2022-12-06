@@ -1,6 +1,5 @@
 package com.example.compshop.mecanicasFragments
 
-import adaptadores.AdaptadorHojalateria
 import adaptadores.AdaptadorMecanica
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.compshop.R
-import com.example.compshop.databinding.FragmentHojalateriaBinding
 import com.example.compshop.databinding.FragmentMecanicaBinding
-import com.example.compshop.rubrosFragments.MecanicosActivity
-import modelos.Hojalateria
-import modelos.HojalateriaProviderPrueba
+import com.example.compshop.MecanicosActivity
 import modelos.Mecanica
 import modelos.MecanicaProviderPrueba
 

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.compshop.MecanicosActivity
 import com.example.compshop.databinding.FragmentHojalateriaBinding
 import modelos.Hojalateria
 import modelos.HojalateriaProviderPrueba
@@ -39,7 +40,7 @@ class HojalateriaFragment : Fragment() {
         }
     }
     private fun onItemSelected(hojalateria: Hojalateria){
-        val intent = Intent(context,MecanicosActivity::class.java)
+        val intent = Intent(context, MecanicosActivity::class.java)
         intent.putExtra("nombre", hojalateria.nombrebd)
         startActivity(intent)
     }

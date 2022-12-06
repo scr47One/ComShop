@@ -7,23 +7,27 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import com.example.compshop.databinding.ActivityMainBinding
+import com.example.compshop.databinding.ActivityMecanicosBinding
 
 import com.example.compshop.rubrosFragments.RubroFragment
 
 
 class MainActivity : AppCompatActivity() {
 
-    var boton : Button?= null
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        boton = findViewById(R.id.button_cotizar)
-
-        boton!!.setOnClickListener()
-        {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.cotizaCard.setOnClickListener{
             startActivity(Intent(this, Cotiza::class.java))
+        }
+        binding.quienesSomosCard.setOnClickListener{
 
+            startActivity(Intent(this, QuienesSomos::class.java))
         }
 
     }

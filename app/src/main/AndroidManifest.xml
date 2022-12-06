@@ -16,7 +16,16 @@
         android:theme="@style/Theme.CompShop"
         tools:targetApi="31">
         <activity
-            android:name=".rubrosFragments.MecanicosActivity"
+            android:name=".QuienesSomos"
+            android:exported="false"
+            android:label="@string/title_activity_quienes_somos"
+            android:theme="@style/Theme.CompShop.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MecanicosActivity"
             android:exported="false" />
         <activity
             android:name=".DetallesMecanicoActivity"
@@ -26,7 +35,6 @@
         <activity
             android:name=".cambio_aceite"
             android:exported="false" />
-
         <activity
             android:name=".acerca"
             android:exported="false"

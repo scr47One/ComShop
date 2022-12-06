@@ -1,10 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.compshop.DetallesMecanicoActivity">
+    tools:context="com.example.compshop.MecanicosActivity">
+
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/precio_descendente"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Descendente"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/precio_ascendente"
+        android:orderInCategory="101"
+        android:title="Ascendente" />
 </menu>
